@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Schema;
 
 namespace ConsoleApp1
 {
@@ -6,18 +7,21 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+            int number;
+            for (int i=0; i<10; i++)
+            {
+                Console.WriteLine("Enter a number:- ");
+                number = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("Even !");
+                } else
+                {
+                    Console.WriteLine("Odd !");
+                }
+            }
 
-            int area = area(length,width);
-
-            Console.WriteLine("Area is "+area);
-
-            static int(int.parse)
-            
 
         }
     }
