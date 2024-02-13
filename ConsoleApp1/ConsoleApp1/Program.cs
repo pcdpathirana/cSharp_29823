@@ -6,18 +6,19 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+            int number;
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
+            Console.Write("Enter a positive integer: ");
 
-            int area = area(length,width);
+            if (!int.TryParse(Console.ReadLine(), out number) || number <= 0)
+            {
+                Console.WriteLine("ERROR: Please enter a positive integer.");
+                return;
+            }
 
-            Console.WriteLine("Area is "+area);
+            int sum = (number * (number + 1)) / 2;
 
-            static int(int.parse)
-            
+            Console.WriteLine($"The sum of numbers from 1 to {number} is: {sum}");
 
         }
     }
