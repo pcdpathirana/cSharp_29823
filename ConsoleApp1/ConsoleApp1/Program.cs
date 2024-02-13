@@ -6,19 +6,14 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
-
-            int area = area(length,width);
-
-            Console.WriteLine("Area is "+area);
-
-            static int(int.parse)
-            
-
+            Console.WriteLine($"Multiplication Table of {number}:");
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine($"{number} x {i} = {number * i}");
+            }
         }
     }
 }
