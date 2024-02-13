@@ -4,21 +4,27 @@ namespace ConsoleApp1
 {
     class Program
     {
+        static int GetFibonacci(int n)
+        {
+            if (n <= 1)
+            {
+                return n;
+            }
+            else
+            {
+                return GetFibonacci(n - 1) + GetFibonacci(n - 2);
+            }
+        }
+
         static void Main(string[] args)
         {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+            Console.Write("Enter the number of terms: ");
+            int n = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
-
-            int area = area(length,width);
-
-            Console.WriteLine("Area is "+area);
-
-            static int(int.parse)
-            
-
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(GetFibonacci(i) + " ");
+            }
         }
     }
 }
