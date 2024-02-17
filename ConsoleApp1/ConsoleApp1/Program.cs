@@ -2,23 +2,21 @@
 
 namespace ConsoleApp1
 {
+    class Book
+    {
+        public string Title { get; set; }
+        public string Author { get; set; }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+            Book myBook = new Book();
+            myBook.Title = "Madol Duwa";
+            myBook.Author = "Martin Wickramasinghe";
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
-
-            int area = area(length,width);
-
-            Console.WriteLine("Area is "+area);
-
-            static int(int.parse)
-            
-
+            Console.WriteLine("Title: {0}, Author: {1}", myBook.Title, myBook.Author);
         }
     }
 }
