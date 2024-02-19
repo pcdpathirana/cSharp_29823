@@ -1,24 +1,33 @@
 ﻿using System;
 
-namespace ConsoleApp1
+class Product
 {
-    class Program
+    public string ProductName { get; set; }
+    public decimal Price { get; set; }
+
+    public Product(string productName, decimal price)
     {
-        static void Main(string[] args)
-        {
-            Console.Write("Enter length:- ");
-            int length = int.Parse(Console.ReadLine());
+        ProductName = productName;
+        Price = price;
+    }
 
-            Console.Write("Enter width:- ");
-            int width = int.Parse(Console.ReadLine());
+    public void DisplayDetails()
+    {
+        Console.WriteLine($"Product Name: {ProductName}");
+        Console.WriteLine($"Price: {Price:C2}");
+    }
+}
 
-            int area = area(length,width);
+class Program
+{
+    static void Main(string[] args)
+    {
+        Product book = new Product("iPhone Back Cover", 12.99m);
+        Product shirt = new Product("Curren Watch", 19.95m);
+        Product headphones = new Product("Wireless Headphones", 79.99m);
 
-            Console.WriteLine("Area is "+area);
-
-            static int(int.parse)
-            
-
-        }
+        book.DisplayDetails();
+        shirt.DisplayDetails();
+        headphones.DisplayDetails();
     }
 }
